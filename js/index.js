@@ -5,7 +5,7 @@ const socialLinks = [
     {
         name: 'vibranteliving0@gmail.com',
         url: 'mailto:vibranteliving0@gmail.com',
-        svg: '/img/icons/E-mail.svg' 
+        svg: '../img/icons/E-mail.svg' 
     },
     {
         name: '@vibrante_living',
