@@ -5,17 +5,17 @@ const socialLinks = [
     {
         name: 'vibranteliving0@gmail.com',
         url: 'mailto:vibranteliving0@gmail.com',
-        svg: '../img/icons/E-mail.svg' // Ruta al SVG de Instagram
+        svg: '../img/icons/E-mail.svg' 
     },
     {
         name: '@vibrante_living',
         url: 'https://www.instagram.com/vibrante_living/',
-        svg: '../img/icons/Instagram.svg' // Ruta al SVG de Instagram
+        svg: '../img/icons/Instagram.svg' 
     },
     {
         name: 'Vibrante Living',
         url: 'https://www.facebook.com/profile.php?id=61567002672598&mibextid=ZbWKwL',
-        svg: '../img/icons/Facebook.svg' // Ruta al SVG de Facebook
+        svg: '../img/icons/Facebook.svg' 
     },
     {
         name: '@VibranteLiving1',
@@ -26,26 +26,25 @@ const socialLinks = [
 
 socialLinks.forEach(link => {
     const col = document.createElement('div');
-    col.classList.add('text-center', 'mx-2'); // Centrar y margen horizontal
+    col.classList.add('text-center', 'mx-2'); 
 
     const anchor = document.createElement('a');
     anchor.href = link.url;
-    anchor.target = '_blank'; // Abre el enlace en una nueva pestaña
+    anchor.target = '_blank'; 
     anchor.classList.add('text-light', 'text-decoration-none');
 
-    // Crear un elemento img para el SVG
     const img = document.createElement('img');
-    img.src = link.svg; // Establecer la ruta del SVG
-    img.alt = link.name; // Texto alternativo
-    img.classList.add('mb-2', 'svg-icon'); // Clase para margen inferior
-    img.style.width = '60px'; // Ajustar el ancho del SVG
-    img.style.height = '60px'; // Ajustar la altura del SVG
+    img.src = link.svg; 
+    img.alt = link.name; 
+    img.classList.add('mb-2', 'svg-icon'); 
+    img.style.width = '60px'; 
+    img.style.height = '60px'; 
 
     const name = document.createElement('div');
-    name.classList.add('mt-2'); // Margen superior
+    name.classList.add('mt-2'); 
     name.textContent = link.name;
 
-    anchor.appendChild(img); // Agregar el SVG al enlace
+    anchor.appendChild(img); 
     col.appendChild(anchor);
     col.appendChild(name);
     footer.appendChild(col);
