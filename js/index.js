@@ -1,6 +1,11 @@
 // Crear el contenido del footer
 const footer = document.getElementById('contact-section');
 
+// Aseguramos que el footer tenga una estructura de rejilla de Bootstrap
+const containerDiv = document.createElement('div');
+containerDiv.classList.add('container', 'd-flex', 'flex-wrap', 'justify-content-center', 'justify-content-md-between');
+
+// Redefinimos los enlaces a redes sociales
 const socialLinks = [
     {
         name: 'vibranteliving0@gmail.com',
@@ -10,58 +15,60 @@ const socialLinks = [
     {
         name: '@vibrante_living',
         url: 'https://www.instagram.com/vibrante_living/',
-        svg: '../img/icons/Instagram.svg' 
+        svg: '/img/icons/Instagram.svg' 
     },
     {
         name: 'Vibrante Living',
         url: 'https://www.facebook.com/profile.php?id=61567002672598&mibextid=ZbWKwL',
-        svg: '../img/icons/Facebook.svg' 
+        svg: '/img/icons/Facebook.svg' 
     },
     {
         name: '@VibranteLiving1',
         url: 'https://x.com/VibranteLiving1',
-        svg: '../img/icons/Twitter.svg' 
+        svg: '/img/icons/Twitter.svg' 
     }
 ];
 
+// Generar el contenido dinámico
 socialLinks.forEach(link => {
     const col = document.createElement('div');
-    col.classList.add('text-center', 'mx-2'); 
+    col.classList.add('text-center', 'mx-2', 'my-3');  // Asegura márgenes en ambos ejes
 
     const anchor = document.createElement('a');
     anchor.href = link.url;
-    anchor.target = '_blank'; 
+    anchor.target = '_blank';
     anchor.classList.add('text-light', 'text-decoration-none');
 
     const img = document.createElement('img');
-    img.src = link.svg; 
-    img.alt = link.name; 
-    img.classList.add('mb-2', 'svg-icon'); 
-    img.style.width = '60px'; 
-    img.style.height = '60px'; 
+    img.src = link.svg;
+    img.alt = link.name;
+    img.classList.add('mb-2', 'svg-icon');
+    img.style.width = '60px';
+    img.style.height = '60px';
 
     const name = document.createElement('div');
-    name.classList.add('mt-2'); 
+    name.classList.add('mt-2');
     name.textContent = link.name;
 
-    anchor.appendChild(img); 
+    anchor.appendChild(img);
     col.appendChild(anchor);
     col.appendChild(name);
-    footer.appendChild(col);
+    containerDiv.appendChild(col);
 });
 
+// Añadir el contenido del footer al #contact-section
+footer.appendChild(containerDiv);
+
+// Sección de formulario de suscripción
 document.addEventListener('DOMContentLoaded', function () {
     // Seleccionamos la etiqueta <main>
     const main = document.querySelector('main');
 
-    // Verificamos si <main> existe para evitar errores
     if (main) {
-        // Creamos el contenedor donde irá el código HTML
         const contactoSection = document.createElement('section');
         contactoSection.id = 'contacto';
         contactoSection.className = 'bg-light py-5';
 
-        // Insertamos el HTML del formulario
         contactoSection.innerHTML = `
             <div class="container text-center p-4">
                 <h2>Suscríbete a nuestras novedades</h2>
@@ -82,4 +89,4 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
         console.error("No se encontró la etiqueta <main>.");
     }
-})
+});
