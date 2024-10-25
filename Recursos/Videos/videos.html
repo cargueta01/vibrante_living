@@ -33,7 +33,7 @@
                 <a class="nav-link" href="/Recetas/recetas.html">Recetas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/Recursos/recursos.html">Recursos</a>
+                <a class="nav-link active active" href="/Recursos/recursos.html">Recursos</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/Sobre_nosotros/about.html">Sobre nosotros</a>
@@ -46,7 +46,7 @@
       <p class="lead">Explora nuestros videos sobre alimentación y salud</p>
     </header>
 
-    <main class="container my-5">
+    <main class="container-fluid my-5">
       <section class="row">
 
         <!-- Video Alimentación Saludable -->
@@ -54,7 +54,7 @@
           <div class="card">
             <figure>
               <video width="100%" controls>
-                <source src="/videos/alimentacion_saludable.mp4" type="video/mp4">
+                <source src="/Recursos/Videos/Alimentacion_saludable.mp4" type="video/mp4" class="card-img-top">
                 Tu navegador no soporta la etiqueta de video.
               </video>
             </figure>
@@ -70,7 +70,7 @@
           <div class="card">
             <figure>
               <video width="100%" controls>
-                <source src="/videos/importancia_dieta.mp4" type="video/mp4">
+                <source src="/Recursos/Videos/Importancia_de_dieta.mp4" type="video/mp4" class="card-img-top">
                 Tu navegador no soporta la etiqueta de video.
               </video>
             </figure>
@@ -86,7 +86,7 @@
           <div class="card">
             <figure>
               <video width="100%" controls>
-                <source src="/videos/recomendaciones_alimentacion_saludable.mp4" type="video/mp4">
+                <source src="/Recursos/Videos/Recomendaciones_alimentacion_saludable.mp4" type="video/mp4" class="card-img-top">
                 Tu navegador no soporta la etiqueta de video.
               </video>
             </figure>
@@ -107,23 +107,25 @@
         </div>
       </section>
 
-      <section id="contact" class="py-5 text-center">
-        <div class="container mb-5">
-          <h2 class="mb-4">Contáctanos</h2>
-          <p class="lead">
-            Síguenos en nuestras redes sociales para más videos y consejos sobre una vida saludable.
-          </p>
+      <section id="contact" class="color-500 text-light p-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <h2 class="mb-4">Síguenos en Redes Sociales</h2>
+            <div
+              id="contact-section"
+              class="d-flex justify-content-between pb-5"
+            ></div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="color-700 text-white text-center py-3">
-      <p>&copy; 2024 Vibrante Living. grupo 7 TPI.</p>
+      <p>&copy; 2024 Jugos Saludables. Grupo 7 TPi.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-
-  <script src="../../js/activeSection.js"></script>
-  <script src="../../js/index.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/js/activeSection.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </html>

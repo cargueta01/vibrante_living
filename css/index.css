@@ -31,6 +31,23 @@ article {
     object-fit: cover;
     height: 100%;
 }
+.card{
+    margin: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.card-img-top {
+    width: 100%; 
+    height: auto; 
+    max-width: 630px; 
+    max-height: 300px; 
+    object-fit: cover; 
+    object-position: top;
+}
+
 
 article:hover {
     transform: translateY(-5px);
@@ -89,3 +106,8 @@ article:hover {
     color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
